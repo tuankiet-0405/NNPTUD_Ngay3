@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        input[type="text"] {
+            padding: 8px;
+            margin-right: 10px;
+        }
+        input[type="submit"] {
+            padding: 8px 15px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        s {
+            color: #999;
+        }
+    </style>
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Quản Lý Bài Viết</h1>
+    <div>
+        <h2>Danh Sách Bài Viết</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>TITLE</th>
+                    <th>VIEWS</th>
+                    <th>ACTION</th>
+                </tr>
+            </thead>
+            <tbody id="table_body">
+                
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h2>Thêm/Sửa Bài Viết</h2>
+        <div class="form-group">
+            <input type="text" id="txt_id" placeholder="ID (để trống để tự động tăng)"/>
+            <input type="text" id="txt_title" placeholder="Title"/>
+            <input type="text" id="txt_views" placeholder="Views"/>
+            <input type="submit" value="Save" onclick="Save()"/>
+        </div>
+    </div>
+    <div>
+        <p style="color: #666; font-size: 12px;">
+            <strong>Ghi chú:</strong>
+            <ul>
+                <li>Để trống ID khi tạo mới để tự động tăng ID</li>
+                <li>Bài viết xoá mềm sẽ hiển thị với gạch ngang</li>
+                <li>Xoá bài viết sẽ đánh dấu xoá thay vì xoá hoàn toàn</li>
+            </ul>
+        </p>
+    </div>
+</body>
+</html>
